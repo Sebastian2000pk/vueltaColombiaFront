@@ -1,8 +1,12 @@
 import React from "react";
 import "./item.css";
 
-const Item = ({ children }) => {
-  return <div className="item">{children}</div>;
+const Item = ({ children, handleClick }) => {
+  return (
+    <div className="item" onClick={handleClick}>
+      {children}
+    </div>
+  );
 };
 
 export default Item;
