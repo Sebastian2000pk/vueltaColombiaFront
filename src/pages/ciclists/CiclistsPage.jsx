@@ -1,5 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ciclistsPage.css";
+
+// Utils
+import {
+  getCiclist,
+  setCiclist,
+  updateCyclist,
+} from "../../utils/ciclistsService";
 
 // Components
 import Item from "../../components/item/Item";
@@ -20,8 +27,6 @@ const CiclistsPage = () => {
   ]);
   const [ciclists, setCiclists] = useState([]);
 
-  console.log(process.env.REACT_APP_API)
-
   const handleChange = (event) => {
     const { target } = event;
     const { name, value } = target;
@@ -39,6 +44,19 @@ const CiclistsPage = () => {
     setCiclistSelected({});
   };
 
+  const getCiclistList = () => {
+    getCiclist()
+      .then((res) => {
+        const { data } = res.data;
+        setCiclists(data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    getCiclistList();
+  }, []);
+
   const handleSaveModal = () => {
     if (!ciclistSelected.name) return;
     if (!ciclistSelected.lastname) return;
@@ -47,7 +65,19 @@ const CiclistsPage = () => {
     if (!ciclistSelected.country) return;
     if (!ciclistSelected.team) return;
     setIsModal(false);
-    setCiclists([...ciclists, ciclistSelected]);
+    if (ciclistSelected.id) {
+      updateCyclist(ciclistSelected)
+        .then((res) => {
+          getCiclistList();
+        })
+        .catch((error) => console.log(error));
+    } else {
+      setCiclist(ciclistSelected)
+        .then((res) => {
+          getCiclistList();
+        })
+        .catch((error) => console.log(error));
+    }
     setCiclistSelected({});
   };
 
