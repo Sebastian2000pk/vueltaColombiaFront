@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Sebastian2000pk/vueltaColombiaFront/static/css/main.f74c35b7.css",
+    "main.js": "/Sebastian2000pk/vueltaColombiaFront/static/js/main.795f5c70.js",
+    "static/media/unal-logo.png": "/Sebastian2000pk/vueltaColombiaFront/static/media/unal-logo.d8cbfe4b309f93096df8.png",
+    "index.html": "/Sebastian2000pk/vueltaColombiaFront/index.html",
+    "main.f74c35b7.css.map": "/Sebastian2000pk/vueltaColombiaFront/static/css/main.f74c35b7.css.map",
+    "main.795f5c70.js.map": "/Sebastian2000pk/vueltaColombiaFront/static/js/main.795f5c70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f74c35b7.css",
+    "static/js/main.795f5c70.js"
+  ]
+}
