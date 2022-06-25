@@ -1,0 +1,11 @@
+.item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  color: rgb(55, 55, 55);
+  font-weight: 500;
+  transition: transform 150ms ease-in-out;
+}
+.item:hover {
+  transform: scale(1.03);
+}
