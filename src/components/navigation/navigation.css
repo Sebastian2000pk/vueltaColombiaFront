@@ -1,0 +1,34 @@
+.navbar {
+  /* background-color: #c23636; */
+  height: 3rem;
+}
+.nav-menu {
+  background-color: #ffffff;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  width: 12rem;
+  transform: translate(-100%);
+}
+.nav-menu.open {
+  transform: translate(0);
+}
+.nav-menu--list {
+  padding: 0;
+}
+.navbar-item {
+  list-style: none;
+  padding: 0.5rem 1rem;
+}
+.navbar-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.container-logo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.container-logo img {
+  height: 4rem;
+}
