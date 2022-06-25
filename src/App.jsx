@@ -9,14 +9,15 @@ import CiclistsPage from "./pages/ciclists/CiclistsPage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <Navigation />
         <div className="container-content">
           <Routes>
+            <Route path="/" element={<CiclistsPage />}></Route>
             <Route path="/ciclists" element={<CiclistsPage />}></Route>
           </Routes>
         </div>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }

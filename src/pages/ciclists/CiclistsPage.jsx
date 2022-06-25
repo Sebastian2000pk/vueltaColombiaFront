@@ -20,6 +20,8 @@ const CiclistsPage = () => {
   ]);
   const [ciclists, setCiclists] = useState([]);
 
+  console.log(process.env.REACT_APP_API)
+
   const handleChange = (event) => {
     const { target } = event;
     const { name, value } = target;
