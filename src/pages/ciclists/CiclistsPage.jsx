@@ -108,7 +108,9 @@ const CiclistsPage = () => {
       {isModal && (
         <Modal handleClose={handleCloseModal} handleSave={handleSaveModal}>
           <div className="container-input">
-            <label htmlFor="name">Nombre: </label>
+            <label htmlFor="name" className="label-input">
+              Nombre:{" "}
+            </label>
             <input
               id="name"
               name="name"
@@ -120,7 +122,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="lastname">Apellido: </label>
+            <label htmlFor="lastname" className="label-input">
+              Apellido:{" "}
+            </label>
             <input
               id="lastname"
               type="text"
@@ -132,7 +136,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="dni">ID/DNI: </label>
+            <label htmlFor="dni" className="label-input">
+              ID/DNI:{" "}
+            </label>
             <input
               id="dni"
               name="dni"
@@ -144,7 +150,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="date">Fecha de nacimiento: </label>
+            <label htmlFor="date" className="label-input">
+              Fecha de nacimiento:{" "}
+            </label>
             <input
               id="date"
               type="date"
@@ -156,7 +164,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="country">Nacionalidad: </label>
+            <label htmlFor="country" className="label-input">
+              Nacionalidad:{" "}
+            </label>
             <input
               id="country"
               name="country"
@@ -168,7 +178,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="team">Equipo: </label>
+            <label htmlFor="team" className="label-input">
+              Equipo:{" "}
+            </label>
             <select
               id="team"
               name="team"
@@ -185,7 +197,9 @@ const CiclistsPage = () => {
             </select>
           </div>
           <div className="container-input">
-            <label htmlFor="photo">Foto: </label>
+            <label htmlFor="photo" className="label-input">
+              Foto:{" "}
+            </label>
 
             <input
               id="photo"
@@ -196,7 +210,9 @@ const CiclistsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="uci">Ranking de UCI: </label>
+            <label htmlFor="uci" className="label-input">
+              Ranking de UCI:{" "}
+            </label>
             <input
               id="uci"
               name="uci"

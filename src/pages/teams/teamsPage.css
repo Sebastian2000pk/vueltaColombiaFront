@@ -19,3 +19,15 @@
 .new-button:hover {
   background-color: #7f9e29;
 }
+
+@media (min-width: 425px) {
+  .teams-page {
+    padding: 0 2%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .teams-page {
+    padding: 0 10%;
+  }
+}

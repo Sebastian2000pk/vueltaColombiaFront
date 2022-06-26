@@ -100,7 +100,9 @@ const TeamsPage = () => {
       {isModal && (
         <Modal handleClose={handleCloseModal} handleSave={handleSaveModal}>
           <div className="container-input">
-            <label htmlFor="name">Nombre: </label>
+            <label htmlFor="name" className="label-input">
+              Nombre:{" "}
+            </label>
             <input
               id="name"
               name="name"
@@ -112,7 +114,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="name">Pais: </label>
+            <label htmlFor="name" className="label-input">
+              Pais:{" "}
+            </label>
             <input
               id="country"
               name="country"
@@ -124,7 +128,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="director">Director: </label>
+            <label htmlFor="director" className="label-input">
+              Director:{" "}
+            </label>
             <input
               id="director"
               name="director"
@@ -136,7 +142,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="sponsor_bike">Marca Bicicleta: </label>
+            <label htmlFor="sponsor_bike" className="label-input">
+              Marca Bicicleta:{" "}
+            </label>
             <input
               id="sponsor_bike"
               name="sponsor_bike"
@@ -148,7 +156,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="sponsor_computer">Marca Computadora: </label>
+            <label htmlFor="sponsor_computer" className="label-input">
+              Marca Computadora:{" "}
+            </label>
             <input
               id="sponsor_computer"
               name="sponsor_computer"
@@ -160,7 +170,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="address">Direccion: </label>
+            <label htmlFor="address" className="label-input">
+              Direccion:{" "}
+            </label>
             <input
               id="address"
               name="address"
@@ -171,7 +183,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="phone">Telefono: </label>
+            <label htmlFor="phone" className="label-input">
+              Telefono:{" "}
+            </label>
             <input
               id="phone"
               name="phone"
@@ -183,7 +197,9 @@ const TeamsPage = () => {
             />
           </div>
           <div className="container-input">
-            <label htmlFor="email">Correo: </label>
+            <label htmlFor="email" className="label-input">
+              Correo:{" "}
+            </label>
             <input
               id="email"
               name="email"
