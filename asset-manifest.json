@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/vueltaColombiaFront/static/css/main.8e77e48d.css",
-    "main.js": "/vueltaColombiaFront/static/js/main.ced10d2c.js",
+    "main.css": "/vueltaColombiaFront/static/css/main.c8f855bf.css",
+    "main.js": "/vueltaColombiaFront/static/js/main.f6b8b0b7.js",
     "static/media/unal-logo.png": "/vueltaColombiaFront/static/media/unal-logo.d8cbfe4b309f93096df8.png",
     "index.html": "/vueltaColombiaFront/index.html",
-    "main.8e77e48d.css.map": "/vueltaColombiaFront/static/css/main.8e77e48d.css.map",
-    "main.ced10d2c.js.map": "/vueltaColombiaFront/static/js/main.ced10d2c.js.map"
+    "main.c8f855bf.css.map": "/vueltaColombiaFront/static/css/main.c8f855bf.css.map",
+    "main.f6b8b0b7.js.map": "/vueltaColombiaFront/static/js/main.f6b8b0b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e77e48d.css",
-    "static/js/main.ced10d2c.js"
+    "static/css/main.c8f855bf.css",
+    "static/js/main.f6b8b0b7.js"
   ]
 }
