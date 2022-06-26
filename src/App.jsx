@@ -5,6 +5,7 @@ import Navigation from "./components/navigation/Navigation";
 
 // Pages
 import CiclistsPage from "./pages/ciclists/CiclistsPage";
+import TeamsPage from "./pages/teams/TeamsPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<CiclistsPage />}></Route>
             <Route path="/ciclists" element={<CiclistsPage />}></Route>
+            <Route path="/teams" element={<TeamsPage />}></Route>
           </Routes>
         </div>
       {/* </BrowserRouter> */}

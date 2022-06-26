@@ -10,7 +10,10 @@ const Navigation = () => {
     <>
       <nav className={navbar ? "nav-menu open" : "nav-menu"}>
         <div className="navbar-button" onClick={() => setNavbar(!navbar)}>
-          <div className={navbar ? "button-hamburguer activate" : "button-hamburguer"}>
+          <div
+            className={
+              navbar ? "button-hamburguer activate" : "button-hamburguer"
+            }>
             <span className="top-bun"></span>
             <span className="suffing"></span>
             <span className="botton-bun"></span>
@@ -20,18 +23,18 @@ const Navigation = () => {
           <img src={Logo} alt="unal logo" />
         </div>
         <ul className="nav-menu--list">
-          <li className="navbar-item">
+          <li className="navbar-item" onClick={() => setNavbar(!navbar)}>
             <Link to="#" className="navbar-link">
               Posiciones
             </Link>
           </li>
-          <li className="navbar-item">
+          <li className="navbar-item" onClick={() => setNavbar(!navbar)}>
             <Link to="/ciclists" className="navbar-link">
               Ciclistas
             </Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/ciclists" className="navbar-link">
+          <li className="navbar-item" onClick={() => setNavbar(!navbar)}>
+            <Link to="/teams" className="navbar-link">
               Equipos
             </Link>
           </li>

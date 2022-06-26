@@ -58,7 +58,7 @@
 }
 .activate .suffing {
   width: 80%;
-  transform: translateX(-3px);
+  transform: translateX(-4px);
 }
 .activate .top-bun {
   transform: rotate(-45deg) translate(-9.5px, -3px);

@@ -7,6 +7,7 @@ import {
   setCiclist,
   updateCyclist,
 } from "../../utils/ciclistsService";
+import { getTeam } from "../../utils/teamsService";
 
 // Components
 import Item from "../../components/item/Item";
@@ -15,16 +16,7 @@ import Modal from "../../components/modal/Modal";
 const CiclistsPage = () => {
   const [isModal, setIsModal] = useState(false);
   const [ciclistSelected, setCiclistSelected] = useState({});
-  const [teams, setTeams] = useState([
-    {
-      id: 0,
-      name: "Seleccionar equipo",
-    },
-    {
-      id: 1,
-      name: "Movistar",
-    },
-  ]);
+  const [teams, setTeams] = useState([]);
   const [ciclists, setCiclists] = useState([]);
 
   const handleChange = (event) => {
@@ -55,6 +47,12 @@ const CiclistsPage = () => {
 
   useEffect(() => {
     getCiclistList();
+    getTeam()
+      .then((res) => {
+        const { data } = res.data;
+        setTeams(data);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const handleSaveModal = () => {
@@ -95,8 +93,10 @@ const CiclistsPage = () => {
 
   return (
     <div className="ciclists-page">
-      <div>
-        <button onClick={newCiclist}>Agregar ciclista</button>
+      <div className="container-new-button">
+        <button onClick={newCiclist} className="new-button">
+          Agregar ciclista
+        </button>
       </div>
       <div className="list-ciclists">
         {ciclists.map((ciclist, key) => (
@@ -107,7 +107,7 @@ const CiclistsPage = () => {
       </div>
       {isModal && (
         <Modal handleClose={handleCloseModal} handleSave={handleSaveModal}>
-          <div>
+          <div className="container-input">
             <label htmlFor="name">Nombre: </label>
             <input
               id="name"
@@ -116,9 +116,10 @@ const CiclistsPage = () => {
               value={ciclistSelected.name}
               disabled={ciclistSelected.isEditing}
               onChange={handleChange}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="lastname">Apellido: </label>
             <input
               id="lastname"
@@ -127,9 +128,10 @@ const CiclistsPage = () => {
               value={ciclistSelected.lastname}
               disabled={ciclistSelected.isEditing}
               onChange={handleChange}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="dni">ID/DNI: </label>
             <input
               id="dni"
@@ -138,9 +140,10 @@ const CiclistsPage = () => {
               value={ciclistSelected.dni}
               disabled={ciclistSelected.isEditing}
               onChange={handleChange}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="date">Fecha de nacimiento: </label>
             <input
               id="date"
@@ -149,9 +152,10 @@ const CiclistsPage = () => {
               value={ciclistSelected.date}
               disabled={ciclistSelected.isEditing}
               onChange={handleChange}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="country">Nacionalidad: </label>
             <input
               id="country"
@@ -160,9 +164,10 @@ const CiclistsPage = () => {
               value={ciclistSelected.country}
               disabled={ciclistSelected.isEditing}
               onChange={handleChange}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="team">Equipo: </label>
             <select
               id="team"
@@ -170,6 +175,7 @@ const CiclistsPage = () => {
               type="text"
               value={ciclistSelected.team}
               disabled={ciclistSelected.isEditing}
+              className="input"
               onChange={handleChange}>
               {teams.map((team, key) => (
                 <option key={key} value={team.id}>
@@ -178,7 +184,7 @@ const CiclistsPage = () => {
               ))}
             </select>
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="photo">Foto: </label>
 
             <input
@@ -186,9 +192,10 @@ const CiclistsPage = () => {
               type="file"
               onChange={handleChange}
               disabled={ciclistSelected.isEditing}
+              className="input"
             />
           </div>
-          <div>
+          <div className="container-input">
             <label htmlFor="uci">Ranking de UCI: </label>
             <input
               id="uci"
@@ -196,6 +203,7 @@ const CiclistsPage = () => {
               type="number"
               value={ciclistSelected.uci}
               onChange={handleChange}
+              className="input"
             />
           </div>
         </Modal>
